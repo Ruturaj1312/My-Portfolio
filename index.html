@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <script>
+            window.onload = function () {
+              if (/Mobi/.test(navigator.userAgent)) {
+                var prompted = sessionStorage.getItem("prompted");
+                if (!prompted) {
+                  var confirmDesktop = confirm("Please set desktop site for better experience.");
+                  if (confirmDesktop) {
+                    sessionStorage.setItem("prompted", "true");
+                  }
+                }
+              }
+            }
+          </script>
+</head>
+
+<body>
+    <!-- <header>
+        <nav>
+            <div class="left">Niranjan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                    <i class="fa-solid fa-circle-xmark icon"></i>
+                </ul>
+                <i class="fa-solid fa-bars icon"></i>
+            </div>
+        </nav>
+    </header> -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="ruturaj.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, I am <span class="name">Ruturaj</span>
+                <div>I am a passionate</div>
+                <!-- <div>Front-End Developer</div> -->
+                <span class="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="rr1.png" alt="">
+            </div>
+        </section>
+    </main>
+
+    <!---------- About section ------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img2.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm Ruturaj Bhandari, Master of Computer Applications (MCA) student with a passion for web
+                        development, I am dedicated to creating dynamic and user-friendly web applications. Hands-on
+                        experience in various web technologies includes HTML, CSS, JavaScript, and frameworks and I'm
+                        Continuously learning and staying updated with the latest trends and best practices in web
+                        development.
+                        I enjoy collaborating with cross-functional teams, problem-solving, and bringing innovative
+                        ideas to life. My goal is to contribute to impactful projects that enhance user experiences and
+                        drive digital transformation.
+
+                        Let's connect and explore how we can create amazing web experiences together!</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML/CSS/Java Script</span> <br>Front-End Web Development</li>
+                            <li><span>Python</span><br>Programming Language</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Fresher</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023-current</span> <br>Masters's Of Computer Applications(MCA)</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------- projects section------------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <p>
+                A Gym Management System is a comprehensive software solution designed to streamline and automate the operations of a fitness center. This system enhances the management of gym memberships, scheduling, billing, and other administrative tasks. It provides a user-friendly interface for gym staff and members, offering features such as member registration, class bookings, payment processing, and attendance tracking.
+
+The system includes a robust database that stores member information, payment history, and class schedules, ensuring data is organized and easily accessible. It also supports the creation of personalized fitness plans and tracks member progress, helping trainers tailor programs to individual needs.
+
+With automated billing and reminders, the system reduces manual errors and ensures timely payments, enhancing financial management. Additionally, it offers reporting tools that provide insights into membership trends, financial performance, and operational efficiency.
+
+Members benefit from the convenience of online registration, booking classes, and accessing their fitness progress through a mobile app or web portal. This enhances member engagement and satisfaction, leading to improved retention rates.
+            </p>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+<!-- ---------------------------------contact--------------------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>ruturaj3897@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+91 9325716859</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ruturaj-bhandari-5273121a5?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BTsqpyifMQEGtvEyHh5KjFA%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Ruturaj1312"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/invites/contact/?igsh=h9yde5jhkl1w&utm_content=3g24tpy"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="Resume Ruturaj Bhandari.pdf" class="btn btn-2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                    <button type="submit" class="btn btn-2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+           
+        </div>
+    </div>
+
+</div>
+<div class="copyright">
+    <p>Copyright <i class="fa-regular fa-copyright"></i> Ruturaj. Made with <i class="fa-regular fa-heart"></i></p>
+</div>
+
+
+
+    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
+    <script src="./index.js"></script>
+
+
+
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwibgCJUcSA9RFNxr0ngyWfTSmxJmgYof73vPBYnwBhoSxTM7HrNZSDU7USrfS8U9G_/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message Sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },2000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+
+</html>
